@@ -40,6 +40,9 @@ if(USE_CUDA)
     message(STATUS "CUDA build enabled.")
     enable_language(CXX)
     enable_language(CUDA)
+
+    include_directories(/usr/local/cuda/include)
+
     list(APPEND ALL_SOURCE_FILES ${CUDA_SOURCE_FILES} ${CPP_SOURCE_FILES})
     add_library(my_library SHARED ${ALL_SOURCE_FILES})# 创建库或可执行文件
     set_target_properties(my_library PROPERTIES
