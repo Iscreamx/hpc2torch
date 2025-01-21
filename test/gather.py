@@ -96,21 +96,21 @@ parser.add_argument('--device', choices=['cpu', 'cuda', 'mlu'], required=True, h
 args = parser.parse_args()    
 test_cases = [
         # inputShape , indexShape, axis, test_dtype, device
-        #((3, 2), (2, 2), 0, torch.float32, "cuda"),
-        #((3, 2), (1, 2), 1, torch.float32, "cuda"),
+        ((3, 2), (2, 2), 0, torch.float32, "cuda"),
+        ((3, 2), (1, 2), 1, torch.float32, "cuda"),
         ((50257, 768), (16, 1024), 0, torch.float32, "cuda"),
 
-        #((3, 2), (2, 2), 0, torch.float16, "cuda"),
-        #((3, 2), (1, 2), 1, torch.float16, "cuda"),
-        #((50257, 768), (16, 1024), 0, torch.float16, "cuda"),
+        ((3, 2), (2, 2), 0, torch.float16, "cuda"),
+        ((3, 2), (1, 2), 1, torch.float16, "cuda"),
+        ((50257, 768), (16, 1024), 0, torch.float16, "cuda"),
 
-        #((9, 9,9,9), (2,7,2), 0, torch.float32, "cuda"),
-        #((9, 9,9,9), (2,7,2), 1, torch.float32, "cuda"),
-        #((9, 9,9,9), (2,7,2), 0, torch.float16, "cuda"),
-        #((9, 9,9,9), (2,7,2), 1, torch.float16, "cuda"),
+        ((9, 9,10,9), (2,7,2), 0, torch.float32, "cuda"),
+        ((9, 9,10,9), (2,7,2), 1, torch.float32, "cuda"),
+        ((9, 9,10,9), (2,7,2), 0, torch.float16, "cuda"),
+        ((9, 9,9,9), (2,7,2), 1, torch.float16, "cuda"),
 
-        #((6, 4, 5, 6), (2, 3, 2), 3, torch.float32, "cuda"),
-        #((4, 5, 4, 4, 5), (2, 3, 2), 4, torch.float32, "cuda"),
+        ((6, 4, 5, 6), (2, 3, 2), 3, torch.float32, "cuda"),
+        ((4, 5, 4, 4, 5), (2, 3, 2), 4, torch.float32, "cuda"),
 
 ]
 filtered_test_cases = [
