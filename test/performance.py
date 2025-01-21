@@ -2,7 +2,7 @@ import torch
 import time
 import logging
 def CudaProfile(*function_with_args):
-    times = 20
+    times = 1
     for _ in range(times):
         for func, args in function_with_args:
             func(*args)

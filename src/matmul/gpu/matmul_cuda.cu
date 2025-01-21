@@ -1,4 +1,4 @@
-#include <cuda.h>
+/*#include <cuda.h>
 
 const int TM = 8;
 const int TN = 8;
@@ -164,3 +164,4 @@ extern "C" void matmul_cuda_f32(void const *dA, void const *dB, void *dC, int M,
     // dim3 grid_dim(num_block_x, num_block_y, 1);
     // row_wmma_ker<<<grid_dim, block_dim>>>((float *)dA, (float *)dB, (float *)dC, M, K, N);
 }
+*/

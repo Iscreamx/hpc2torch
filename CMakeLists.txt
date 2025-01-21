@@ -46,7 +46,7 @@ if(USE_CUDA)
     list(APPEND ALL_SOURCE_FILES ${CUDA_SOURCE_FILES} ${CPP_SOURCE_FILES})
     add_library(my_library SHARED ${ALL_SOURCE_FILES})# 创建库或可执行文件
     set_target_properties(my_library PROPERTIES
-        CUDA_ARCHITECTURES 80
+        CUDA_ARCHITECTURES 75
     )
     target_link_libraries(my_library cudnn cublas)#如果调用cudnn库需要链接cudnn, cublas
 
